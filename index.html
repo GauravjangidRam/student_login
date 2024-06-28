@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form with Table</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Form Example</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit"  id="btn-submit"class="btn btn-primary">Submit</button>
+            <div class="msg"></div>
+        </form>
+
+        <div class="table-container" id="tableContainer">
+            <h3>Submitted Data</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="background-color: cadetblue; margin: 5px; padding: 10px;">
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="jqueryajex.js"></script>
+    <!-- <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            // Create new row and cells
+            const tableBody = document.getElementById('tableBody');
+            const newRow = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const emailCell = document.createElement('td');
+            const phoneCell = document.createElement('td');
+
+            // Set cell values
+            nameCell.textContent = name;
+            emailCell.textContent = email;
+            phoneCell.textContent = phone;
+
+            // Append cells to the new row
+            newRow.appendChild(nameCell);
+            newRow.appendChild(emailCell);
+            newRow.appendChild(phoneCell);
+
+            // Append new row to the table body
+            tableBody.appendChild(newRow);
+
+            // Display the table container
+            document.getElementById('tableContainer').style.display = 'block';
+
+            // Clear the form
+            document.getElementById('userForm').reset();
+        });
+    </script> -->
+</body>
+</html>
